@@ -57,7 +57,6 @@ npm start
 - change title in public/index.html
 - replace favicon.ico in public
 - resource [Generate Favicons](https://favicon.io/)
--->
 #### Normalize.css and Global Styles
 
 - CSS in JS (styled-components)
@@ -79,7 +78,7 @@ npm install normalize.css
 - Coding Addict - [Default Starter Video](https://youtu.be/UDdyGNlQK5w)
 - Repo - [Default Starter Repo](https://github.com/john-smilga/default-starter)
 
-<!--
+-->
 #### Landing Page
 
 - zoom level 175%
@@ -98,6 +97,7 @@ npm install normalize.css
 - import logo.svg and main.svg
 - import Landing in App.js and render
 
+<!--
 #### Styled Components
 
 - CSS in JS
