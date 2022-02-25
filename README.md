@@ -78,7 +78,6 @@ npm install normalize.css
 - Coding Addict - [Default Starter Video](https://youtu.be/UDdyGNlQK5w)
 - Repo - [Default Starter Repo](https://github.com/john-smilga/default-starter)
 
--->
 #### Landing Page
 
 - zoom level 175%
@@ -97,7 +96,7 @@ npm install normalize.css
 - import logo.svg and main.svg
 - import Landing in App.js and render
 
-<!--
+-->
 #### Styled Components
 
 - CSS in JS
@@ -140,6 +139,7 @@ const Component = () => {
 - only responsible for styling
 - wrappers folder in assets
 
+<!--
 #### Logo and Images
 
 - logo built in Figma
