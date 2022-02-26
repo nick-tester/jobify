@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 import Logo from "../components/Logo";
@@ -13,7 +14,7 @@ const LandingPage = () => {
                 <div className="info">
                     <h1>job <span>tracking</span> app</h1>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores dolore neque inventore iste veniam, mollitia, qui doloremque provident impedit nisi nemo nulla quod! At natus in laudantium recusandae, fugiat ipsum?</p>
-                    <button className="btn btn-hero">login/register</button>
+                    <Link to="/register" className="btn btn-hero">login/register</Link>
                 </div>
             </div>
             <img src={main} alt="job hunt" className="img main-img" />
