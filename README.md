@@ -96,7 +96,6 @@ npm install normalize.css
 - import logo.svg and main.svg
 - import Landing in App.js and render
 
--->
 #### Styled Components
 
 - CSS in JS
@@ -139,7 +138,6 @@ const Component = () => {
 - only responsible for styling
 - wrappers folder in assets
 
-<!--
 #### Logo and Images
 
 - logo built in Figma
@@ -204,6 +202,7 @@ return (
 )
 ```
 
+-->
 #### Setup Pages
 
 - create Error, Register, Dashboard pages
@@ -216,6 +215,7 @@ return (
 - add to element={}
 - remove temp navbar
 
+<!--
 #### Error Page
 
 ```js
