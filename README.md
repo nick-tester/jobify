@@ -202,7 +202,6 @@ return (
 )
 ```
 
--->
 #### Setup Pages
 
 - create Error, Register, Dashboard pages
@@ -215,7 +214,7 @@ return (
 - add to element={}
 - remove temp navbar
 
-<!--
+-->
 #### Error Page
 
 ```js
@@ -235,6 +234,7 @@ return (
 )
 ```
 
+<!--
 #### Auto Imports
 
 - use while developing
