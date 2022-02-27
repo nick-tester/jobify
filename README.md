@@ -214,7 +214,6 @@ return (
 - add to element={}
 - remove temp navbar
 
--->
 #### Error Page
 
 ```js
@@ -234,7 +233,6 @@ return (
 )
 ```
 
-<!--
 #### Auto Imports
 
 - use while developing
@@ -306,6 +304,7 @@ function Register() {
 }
 ```
 
+-->
 #### FormRow Component
 
 - create FormRow.js in <b>components</b>
@@ -335,6 +334,7 @@ const FormRow = ({ type, name, value, handleChange, labelText }) => {
 export default FormRow
 ```
 
+<!--
 #### Alert Component
 
 - right away setup as component
