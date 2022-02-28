@@ -1,81 +1,70 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-import { Logo } from "../components";
+import { Logo, FormField } from "../components";
 
 const Registerpage = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [password2, setPassword2] = useState("");
+    const [isRegistered, setIsRegistered] = useState(false);
 
     function submitHandler(e) {
         e.preventDefault();
-        console.log({ name, email, password, password2 });
+        if (!isRegistered) {
+            console.log({ name, email, password, password2 });
+        } else {
+            console.log({ email, password });
+        }
     }
 
     return (
         <Wrapper className="full-name">
             <form className="form" onSubmit={submitHandler}>
                 <Logo />
-                <h3>Login</h3>
-
-                <div className="form-row">
-                    <label htmlFor="name" className="form-label">
-                        name
-                    </label>
-
-                    <input
-                        type="text"
-                        value={name}
-                        name="name"
-                        onChange={e => setName(e.target.value)}
-                        className="form-input"
+                <h3>{isRegistered ? "Login" : "Register"}</h3>
+                {!isRegistered && (
+                    <FormField
+                        TYPE="text"
+                        VALUE={name}
+                        NAME="name"
+                        ONCHANGEHANDLER={e => setName(e.target.value)}
                     />
-                </div>
-                <div className="form-row">
-                    <label htmlFor="email" className="form-label">
-                        email
-                    </label>
-
-                    <input
-                        type="text"
-                        value={email}
-                        name="email"
-                        onChange={e => setEmail(e.target.value)}
-                        className="form-input"
+                )}
+                <FormField
+                    TYPE="text"
+                    VALUE={email}
+                    NAME="email"
+                    ONCHANGEHANDLER={e => setEmail(e.target.value)}
+                />
+                <FormField
+                    TYPE="password"
+                    VALUE={password}
+                    NAME="password"
+                    ONCHANGEHANDLER={e => setPassword(e.target.value)}
+                />
+                {!isRegistered && (
+                    <FormField
+                        TYPE="password"
+                        VALUE={password2}
+                        NAME="password2"
+                        TEXT="Confirm Password"
+                        ONCHANGEHANDLER={e => setPassword2(e.target.value)}
                     />
-                </div>
-                <div className="form-row">
-                    <label htmlFor="password" className="form-label">
-                        password
-                    </label>
-
-                    <input
-                        type="password"
-                        value={password}
-                        name="password"
-                        onChange={e => setPassword(e.target.value)}
-                        className="form-input"
-                    />
-                </div>
-                <div className="form-row">
-                    <label htmlFor="password2" className="form-label">
-                        confirm password
-                    </label>
-
-                    <input
-                        type="password"
-                        value={password2}
-                        name="password2"
-                        onChange={e => setPassword2(e.target.value)}
-                        className="form-input"
-                    />
-                </div>
+                )}
 
                 <button type="submit" className="btn btn-block">
                     submit
                 </button>
+
+                {isRegistered ? (
+                    <p>Not registered ? <Link to="" onClick={() => setIsRegistered(!isRegistered)}> register</Link></p>
+                ) : (
+                    <p>Already registered ? <Link to="" onClick={() => setIsRegistered(!isRegistered)}> login</Link></p>
+                )}
+
             </form>
         </Wrapper>
     );
@@ -112,6 +101,10 @@ const Wrapper = styled.section`
     cursor: pointer;
     letter-spacing: var(--letterSpacing);
   }
+  a:link,
+  a:visited {
+      color: var(--primary-500);
+  } 
 `
 
 export default Registerpage;
