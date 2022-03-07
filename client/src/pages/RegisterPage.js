@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 import { Logo, FormField, Alert } from "../components";
+import { useGlobalContext } from "../assets/context/appContext";
 
 const Registerpage = () => {
     const [name, setName] = useState("");
@@ -10,7 +11,8 @@ const Registerpage = () => {
     const [password, setPassword] = useState("");
     const [password2, setPassword2] = useState("");
     const [isRegistered, setIsRegistered] = useState(false);
-    const [alert, setAlert] = useState(false);
+
+    const { isLoading, alert } = useGlobalContext();
 
     function submitHandler(e) {
         e.preventDefault();
@@ -25,7 +27,7 @@ const Registerpage = () => {
         <Wrapper className="full-name">
             <form className="form" onSubmit={submitHandler}>
                 <Logo />
-                {alert && <Alert type="danger" message="oops!" />}
+                {alert.show && <Alert type={alert.type} message={alert.msg} />}
                 <h3>{isRegistered ? "Login" : "Register"}</h3>
                 {!isRegistered && (
                     <FormField

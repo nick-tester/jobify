@@ -304,7 +304,6 @@ function Register() {
 }
 ```
 
--->
 #### FormRow Component
 
 - create FormRow.js in <b>components</b>
@@ -334,7 +333,6 @@ const FormRow = ({ type, name, value, handleChange, labelText }) => {
 export default FormRow
 ```
 
-<!--
 #### Alert Component
 
 - right away setup as component
@@ -396,6 +394,7 @@ return (
 )
 ```
 
+-->
 #### Global Context
 
 - in src create <b>context</b> directory
@@ -459,6 +458,7 @@ const { isLoading, showAlert } = useAppContext()
 
 - switch to global showAlert
 
+<!--
 #### useReducer
 
 - [React Tutorial](https://youtu.be/iZhV0bILFb0)
