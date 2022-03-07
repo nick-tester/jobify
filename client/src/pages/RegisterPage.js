@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-import { Logo, FormField } from "../components";
+import { Logo, FormField, Alert } from "../components";
 
 const Registerpage = () => {
     const [name, setName] = useState("");
@@ -10,6 +10,7 @@ const Registerpage = () => {
     const [password, setPassword] = useState("");
     const [password2, setPassword2] = useState("");
     const [isRegistered, setIsRegistered] = useState(false);
+    const [alert, setAlert] = useState(false);
 
     function submitHandler(e) {
         e.preventDefault();
@@ -24,6 +25,7 @@ const Registerpage = () => {
         <Wrapper className="full-name">
             <form className="form" onSubmit={submitHandler}>
                 <Logo />
+                {alert && <Alert type="danger" message="oops!" />}
                 <h3>{isRegistered ? "Login" : "Register"}</h3>
                 {!isRegistered && (
                     <FormField
