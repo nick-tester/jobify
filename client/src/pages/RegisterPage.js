@@ -12,14 +12,16 @@ const Registerpage = () => {
     const [password2, setPassword2] = useState("");
     const [isRegistered, setIsRegistered] = useState(false);
 
-    const { isLoading, alert } = useGlobalContext();
+    const { alert, displayAlert } = useGlobalContext();
 
     function submitHandler(e) {
         e.preventDefault();
         if (!isRegistered) {
             console.log({ name, email, password, password2 });
+            displayAlert({ show: true, type: "success", msg: "Successfully registered!" })
         } else {
             console.log({ email, password });
+            displayAlert({ show: true, type: "success", msg: "Successfully logged in!" })
         }
     }
 

@@ -394,7 +394,6 @@ return (
 )
 ```
 
--->
 #### Global Context
 
 - in src create <b>context</b> directory
@@ -458,7 +457,7 @@ const { isLoading, showAlert } = useAppContext()
 
 - switch to global showAlert
 
-<!--
+-->
 #### useReducer
 
 - [React Tutorial](https://youtu.be/iZhV0bILFb0)
@@ -527,6 +526,7 @@ const Alert = () => {
 }
 ```
 
+<!--
 #### Display Alert
 
 - [JS Nuggets - Dynamic Object Keys](https://youtu.be/_qxCYtWm0tw)

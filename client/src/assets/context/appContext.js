@@ -1,16 +1,23 @@
-import { useState, useReducer, createContext, useContext } from "react";
+import { useReducer, createContext, useContext } from "react";
+
+import { DISPLAY_ALERT } from "./actions";
+import reducer from "./reducer";
 
 const initialState = {
     isLoading: false,
-    alert: { show: true, type: "danger", msg: "Oops!" }
+    alert: { show: false, type: "danger", msg: "Oops!" }
 }
 
 const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
-    const [state, setState] = useState(initialState);
+    const [state, dispatch] = useReducer(reducer, initialState);
 
-    return <AppContext.Provider value={({ ...state, setState })}>
+    const displayAlert = (payload) => {
+        dispatch({ type: DISPLAY_ALERT, payload })
+    }
+
+    return <AppContext.Provider value={({ ...state, displayAlert })}>
         {children}
     </AppContext.Provider>
 };
