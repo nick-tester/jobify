@@ -457,7 +457,6 @@ const { isLoading, showAlert } = useAppContext()
 
 - switch to global showAlert
 
--->
 #### useReducer
 
 - [React Tutorial](https://youtu.be/iZhV0bILFb0)
@@ -526,7 +525,6 @@ const Alert = () => {
 }
 ```
 
-<!--
 #### Display Alert
 
 - [JS Nuggets - Dynamic Object Keys](https://youtu.be/_qxCYtWm0tw)
@@ -599,6 +597,7 @@ const clearAlert = () => {
 }
 ```
 
+-->
 #### Setup Server
 
 - stop the dev server in client
@@ -641,6 +640,7 @@ package.json
 "type":"module"
 ```
 
+<!--
 #### Nodemon and Basic Express Server
 
 ```sh
