@@ -597,7 +597,6 @@ const clearAlert = () => {
 }
 ```
 
--->
 #### Setup Server
 
 - stop the dev server in client
@@ -640,7 +639,6 @@ package.json
 "type":"module"
 ```
 
-<!--
 #### Nodemon and Basic Express Server
 
 ```sh
@@ -797,6 +795,7 @@ const El = styled.el`
 - vscode-styled-components extension
 - colors and bugs
 - style entire react component
+  <!--
 
 ```js
 const Wrapper = styled.el``
@@ -1383,6 +1382,7 @@ npm install dotenv
 - /node_modules
 - .env
 
+-->
 #### Connect to MongoDB
 
 - switched back to PORT=5000
